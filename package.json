@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev --port 6005"
+    "dev": "next dev --port 6005",
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "",
