@@ -1,7 +1,9 @@
 import { API_URL } from "@app/(home)/page.jsx";
 
+import styles from "@styles/movie-videos.module.css";
+
 async function getVideos(id) {
-  console.log(`Fetching videos: ${Date.now()}`);
+  // console.log(`Fetching videos: ${Date.now()}`);
   await new Promise((resolve) => setTimeout(resolve, 3000));
   // throw new Error("something broke...");
   const response = await fetch(`${API_URL}/${id}/videos`);
@@ -11,6 +13,19 @@ async function getVideos(id) {
 export default async function MovieVideos({ id }) {
   const videos = await getVideos(id);
   return (
-    <h5>{JSON.stringify(videos)}</h5>
+    <>
+      <h3 className={styles.trailer}>Movie Trailers</h3>
+      <div className={styles.container}>
+        {videos.map((video) => (
+          <iframe 
+            key={video.id} 
+            src={`https://youtube.com/embed/${video.key}`} 
+            title={video.title} 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            />)
+        )}
+      </div>
+    </>
   );
 }

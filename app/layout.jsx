@@ -1,6 +1,6 @@
 import "@styles/global.css";
 
-import Navigation from "../components/navigation.jsx";
+import Navigation from "@components/navigation.jsx";
 
 export const metadata = {
   title: {
