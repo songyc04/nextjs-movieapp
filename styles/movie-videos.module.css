@@ -1,3 +1,8 @@
+.divider {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
 .trailer {
   font-size: 20px;
   /* background-color: red; */

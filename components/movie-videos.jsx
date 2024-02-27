@@ -14,6 +14,7 @@ export default async function MovieVideos({ id }) {
   const videos = await getVideos(id);
   return (
     <>
+      <hr className={styles.divider} />
       <h3 className={styles.trailer}>Movie Trailers</h3>
       <div className={styles.container}>
         {videos.map((video) => (
