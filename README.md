@@ -1,1 +1,1 @@
-#References: https://nomadcoders.co/nextjs-for-beginners/lobby
+References: https://nomadcoders.co/nextjs-for-beginners/lobby
